@@ -100,7 +100,6 @@ function In_stream_song(id){
 function deletThisSong(id){
     if (id==0){
         All_song.shift()
-        console.log("shift")
     }
     else{
         All_song.splice(id, 1);
