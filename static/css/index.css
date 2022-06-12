@@ -1,0 +1,490 @@
+@font-face {
+    font-family:'Noto Sans TC';
+    font-style: normal;
+    font-weight: 700;
+    src:url("https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap&subset=chinese-traditional"),
+}
+body {
+    --nav-width: 200px;
+    margin: 0 0 0 var(--nav-width);
+    font-family: 'Quicksand','Noto Sans TC', sans-serif;
+    font-size: 18px;
+    background-color:black ;
+    color: #eeeeee;
+}
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--nav-width);
+    height: 100vh;
+    background: #222222;
+    color: #eeeeee;
+}
+.nav__link {
+    display: block;
+    padding: 12px 18px;
+    text-decoration: none;
+    color: #eeeeee;
+    font-weight: 500;
+    background:  #222222;
+}
+.nav__link:hover{
+    cursor: pointer; 
+    background-color: #009579;
+    color: #FFFFFF;
+    
+}
+.nav__link:link {
+    background:  #222222;
+}
+.top__nav{
+    display: flex;
+    position: fixed;
+    top:0px;
+    height: 45px;
+    width: 100%;
+    font-size: 20px;
+    align-items: center;
+    background-color: #222222;
+
+}
+.top_nav_bt{
+    padding: 2px;
+    margin-left: 20px;
+    width: 20px;
+    flex: 2;
+}
+.top_nav_bt:hover{
+    cursor: pointer;
+}
+.top_nav_user{
+    padding: 2px;
+    display: flex;
+    flex: 1;
+    
+}
+.top_nav_sign{
+    text-align:center;
+    margin-right: 30px;
+}
+.top_nav_sign_bt{
+    margin-right: 10px;
+    padding: 5px;
+}
+.top_nav_sign_bt {
+    color: #eeeeee;
+}
+#memberArea{
+    display: flex;
+    margin-left: 150px;
+}
+.memberName:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+#memberArea img{
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    border-radius: 15px;
+    margin-top: 1px;
+    
+}
+.memberItem{
+    position: absolute;
+    top:38px;
+    display: none;
+    background-color: #000;
+    color: #FFF;
+    z-index:3;
+}
+.memberItemText{
+    padding: 5px;
+}
+.memberItemText:hover{
+    cursor: pointer;
+    background-color: #009579;
+}
+#app {
+    margin: 3em;
+    margin-top: 3em;
+    line-height: 1.5;
+    font-weight: 500;
+}
+a{
+    color: #FFFFFF;
+}
+a:link {
+    color:  #FFFFFF;
+    text-decoration:none;
+}
+a:active{
+    color: #FFFFFF;
+}
+a:hover{
+    color:#009579;
+    text-decoration:none;
+}
+.albumName{
+    color:#009579;
+    text-decoration:none;
+}
+#meanForSong{
+    position: absolute;
+    display: none;
+    background-color: #FFFFFF;
+    z-index: 2;
+    padding: 10px;
+    font-size: 20px;
+    color:black;
+}
+.meanForSongText{
+    margin: 5px;
+    padding: 2px;
+}
+.meanForSongText:hover{
+    background-color: #009579;
+    cursor: pointer;
+}
+.meanForSongPlaylist{
+    position: absolute;
+    left: 160px;
+    top:50px;
+    display: none;
+    background-color: #FFFFFF;
+    color:black;
+
+}
+#addforplaylsit:hover .meanForSongPlaylist{
+    display: block;
+}
+.meanForSongPlaylist:hover .meanForSongPlaylist{
+    display: block;
+}
+.meanForSongPlaylistText{
+    background-color: #FFFFFF;
+    width: 250px;
+    height: 25px;
+    text-align:center;
+    padding: 10px;
+    line-height:20px;
+    color:black;
+    
+
+
+}
+.meanForSongPlaylistText:hover{
+    background-color:#009579;
+}
+#meanForPlaylist{
+    position: absolute;
+    display: none;
+    background-color: black;
+    z-index: 2;
+    padding: 10px;
+    font-size: 20px;
+    color: #eeeeee;
+}
+#messageTologin{
+    background-color: #009579;
+    width: 300px;
+    height: 120px;
+    border-radius: 10px;
+    position: absolute;
+    display: none;
+}
+#messageTitle{
+    font-size: 22px;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+#messageText{
+    font-size: 15px;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+#messageBt{
+    display: flex;
+    flex-direction:row-reverse;
+    margin-top: 10px;
+}
+#messageTologinClose{
+    margin-right: 10px;
+}
+.message_sign_bt{
+    color:#FFFFFF;
+    margin-right: 20px;
+
+}
+#messageTologinClose:hover{
+    cursor: pointer;
+}
+
+
+
+#meanForUserimg{
+    width: 400px;
+    height: 400px;
+    background-color: #009579;
+    text-align: center;
+    border-radius: 20px;
+    position: absolute;
+    z-index: 3;
+    display: none;
+
+}
+#maenForUserimgSp{
+    height: 15px;
+}
+.meanUserImgbt {
+    border-radius: 10px;
+    font-size: 25px;
+    margin-left: 15px;
+
+}
+.meanUserImgbt:hover{
+    cursor: pointer;
+}
+#meanForUserImgDemo{
+    margin-top: 20px;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    
+}
+#meanForUserimgCheck{
+    margin-top: 10px;
+    font-size: 25px;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+#meanForUserimgCheck:hover{
+    cursor: pointer;
+}
+#meanUserImgClosebt{
+    position: relative;
+    left: 75px;
+    bottom: 10px;
+    font-size: 35px;
+}
+#meanUserImgClosebt:hover{
+    cursor: pointer;
+}
+
+
+
+#meanForPlaylistimg{
+    width: 400px;
+    height: 400px;
+    background-color: #009579;
+    text-align: center;
+    border-radius: 20px;
+    position: absolute;
+    z-index: 3;
+    display: none;
+
+    
+
+}
+#meanForPlaylistimgSp{
+    height: 15px;
+}
+.meanForPlaylistimgbt {
+    border-radius: 10px;
+    font-size: 25px;
+    margin-left: 15px;
+
+}
+.meanForPlaylistimgbt:hover{
+    cursor: pointer;
+}
+#meanForPlaylistimgDemo{
+    margin-top: 20px;
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+    
+}
+#meanForPlaylistimgCheck{
+    margin-top: 10px;
+    font-size: 25px;
+    color:#FFFFFF;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#meanForPlaylistimgCheck:hover{
+    cursor: pointer;
+}
+#meanForPlaylistimgClosebt{
+    position: relative;
+    left: 75px;
+    bottom: 10px;
+    font-size: 35px;
+}
+#meanForPlaylistimgClosebt:hover{
+    cursor: pointer;
+}
+
+
+
+
+
+#meanForChangePlaylistName{
+    width: 180px;
+    height: 100px;
+    background-color: #009579;
+    padding: 10px;
+    border-radius: 10px;
+    position: absolute;
+    display: none;
+    z-index: 3;
+
+}
+#meanForChangePlaylistNameClosebt{
+    position: relative;
+    top:5px;
+    left: 15px;
+
+}
+#meanForChangePlaylistNameClosebt:hover{
+    cursor: pointer;
+    color: #000;
+}
+#meanForChangePlaylistNameTitle{
+    font-size: 20px;
+}
+#meanForChangePlaylistNameValue{
+    padding: 5px;
+    width: 150px;
+    margin-top: 10px;
+}
+#meanForChangePlaylistNameCheck{
+    position: relative;
+    left: 120px;
+    bottom: 20px;
+}
+#meanForChangePlaylistNameCheck{
+    cursor: pointer;
+    color: #000;
+}
+
+
+
+
+#meanForChangeUserName{
+    width: 180px;
+    height: 100px;
+    background-color: #009579;
+    padding: 10px;
+    border-radius: 10px;
+    position: absolute;
+    display: none;
+    z-index: 3;
+
+}
+#meanForChangeUserNameClosebt{
+    position: relative;
+    top:2px;
+    margin-left: 5px;
+    background-color: #009579;
+    border: 0px;
+    font-size: 20px;
+    color: #FFF;
+    font-family: 'Quicksand','Noto Sans TC', sans-serif;
+
+}
+#meanForChangeUserNameClosebt:hover{
+    cursor: pointer;
+    color: #000;
+}
+#meanForChangeUserNameTitle{
+    font-size: 20px;
+    align-items: center;
+    
+}
+#meanForChangeUserNameTitle label{
+    font-size: 10px;
+    margin-left: 10px;
+    color: crimson;
+}
+#meanForChangeUserNameInput{
+    padding: 5px;
+    width: 150px;
+    margin-top: 10px;
+}
+#meanForChangeUserNameCheck{
+    position: relative;
+    top:3px;
+    margin-left: 50px;
+    background-color: #009579;
+    border: 0px;
+    font-size: 20px;
+    color: #FFF;
+    font-family: 'Quicksand','Noto Sans TC', sans-serif;
+}
+
+#meanForChangeUserNameCheck:hover{
+    cursor: pointer;
+    color: #000;
+}
+#meanForChangeUserNameCheck:disabled{
+    color: darkgrey;
+    cursor: no-drop;
+    
+}
+
+
+
+
+
+
+
+
+
+
+.bg{
+    background-color: #000;
+    border: 1px red solid;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    opacity: 0.3;
+    -webkit-opacity: 0.3;
+    -moz-opacity: 0.3;
+    display: none;
+    
+}
+#tellmessage{
+    position: absolute;
+    font-size: 30px;
+    background-color: 	#007FFF;
+    width: 250px;
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 4;
+}
+#tellmessage{
+    cursor: wait;
+    display: none;
+}
+
+
+
+#sortDiv{
+    position: absolute;
+    top: 80px;
+    left:500px ;
+    font-size: 20px;
+    display: none;
+
+}
+#sortDiv select{
+    font-size: 20px;
+
+}

@@ -1,0 +1,74 @@
+@font-face {
+    font-family:'Noto Sans TC';
+    font-style: normal;
+    font-weight: 700;
+    src:url("https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap&subset=chinese-traditional"),
+}
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    align-content: center;
+    font-family: 'Quicksand','Noto Sans TC', sans-serif;
+    justify-content: center; 
+    font-size: 20px;
+}
+#topLine{
+    width: 100%;
+    size: 10px;
+}
+#bottonline{
+    width: 200px;
+    margin-right:auto;
+    margin-left: auto;
+    margin-top: 35px;
+}
+.icon{
+    margin: auto;
+    font-size: 40px;
+}
+.sign-title{
+    margin-top:15px ;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+
+    
+}
+.sign-text-div{
+    margin: auto;
+    width: 200px;
+}
+.sign-text{
+    padding: 5px;
+    height: 20px;
+    width: 200px;
+}
+.sign-button-div{
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 20px;
+}
+button{
+    background-color: #009579;
+    color: aliceblue;
+    border: #009579;
+    height: 35px;
+    border-radius: 5px;
+    width: 100px;
+}
+.sign-connect{
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+a:visited{
+    color: black;
+}
+#regmessage{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    color: red;
+}

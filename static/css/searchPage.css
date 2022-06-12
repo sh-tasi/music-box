@@ -1,0 +1,32 @@
+.searchTop{
+    display: flex;
+}
+#searchKey{
+    padding: 10px;
+    font-size: 16px;
+}
+#searchIndexKey{
+    padding: 10px;
+    font-size: 16px;
+}
+#searchBtDiv{
+
+    border-radius: 2px;
+}
+#searchBt{
+    background-color: #009579;;
+    font-size: 42px;
+}
+#searchBt:hover{
+    cursor: pointer;
+}
+.PlaylistSongTitleTime2{
+    flex: 0.86;
+}
+#searchButtonDiv{
+    margin-top: 10px;
+}
+#searchBtDiv:hover{cursor: pointer;}
+.rightMean:hover{
+    cursor: pointer;
+}

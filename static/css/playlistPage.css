@@ -1,0 +1,87 @@
+.playlistTopArea{
+    display: flex;
+}
+.playlistTopArea img{
+    height: 196px;
+    width: 196px;
+}
+.playlistTopArea img:hover{
+    cursor: pointer;
+}
+.listName{
+    margin-left: 10px;
+    margin-top: 50px;
+    font-size: 40px;
+    display: flex;
+}
+#changePlaylistNameBt{
+    margin-left: 15px;
+}
+#changePlaylistNameBt:hover{
+    cursor: pointer;
+}
+.playlistTitle{
+    display: flex;
+}
+.playlistAllSongForKey{
+    display: flex;
+}
+.playlistAllSongForKey img{
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+}
+.PlaylistSongTitleName{
+    flex: 1.2;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.PlaylistSongTitleTime{
+    flex: 1;
+}
+.albumNameDiv{
+    flex:1;
+}
+.playlistSongTitle{
+    flex:1;
+    
+}
+.playlistTimeBox{
+    flex:0.8;
+}
+.playlsitAlbumNameBox{
+    flex:1;
+}
+.playlistSongTitle:hover{
+
+    background-color: rgba(225, 225, 225, .25);
+    cursor:pointer;	
+}
+.playlsitAlbumNameBox:hover{
+    background-color: rgba(225, 225, 225, .25);
+    cursor:pointer;	
+}
+.playlistDelet{
+    flex:0.15;
+}
+.playlistDelet:hover{
+    cursor: pointer;
+}
+.rightDiv img{
+    width: 100px;
+    height: 100px;
+    margin-left: 5px;
+}
+.rightDiv img:hover{
+    cursor: pointer;
+}
+.SongTitleNumberDiv{
+    width: 25px;
+}
+.nubmerBox{
+    width: 30px;
+}
+.allAreaFORplaylist{
+    margin-bottom: 120px;
+}

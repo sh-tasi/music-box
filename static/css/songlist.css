@@ -1,0 +1,56 @@
+.song{
+    display: flex;
+    height: 30px;
+    padding: 5px;
+}
+.songName{
+    flex:9;
+    margin-left: 20px;
+}
+.songTime{
+    flex:1.1;
+    
+}
+.songTimeForList{
+    flex:1;
+}
+
+.songTitle{
+    display: flex;
+    height: 30px;
+    padding: 5px;
+    margin-top: 10px;
+}
+.albumBoxForSongList{
+    display: flex;
+    margin-top: 10px;
+}
+.albumBoxForSongList img{
+    width: 232px;
+    height: 232px;
+    border-radius:10px; ;
+}
+.albumRightSide{
+    margin-left: 20px;
+   
+}
+.albumPageName{
+    font-size: 48px;
+}
+.albumPageArtis{
+    font-size: 24px;
+    opacity:0.8;
+}
+
+.song:hover{
+
+    background-color: rgba(225, 225, 225, .25);
+    cursor:pointer;	
+}
+#albumPlay{
+    width: 100px;
+    height: 100px;
+}
+#albumPlay:hover{
+    cursor: pointer;
+}

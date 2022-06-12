@@ -1,0 +1,36 @@
+.queueBox{
+    margin-bottom: 100px;
+}
+.queueSong{
+    display: flex;
+    padding: 5px;
+    height: 50px;
+}
+.queueSong img{
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+    
+}
+.queueSongName{
+    flex:3;
+    margin-left: 50px;
+}
+.queueSongName:hover{
+    cursor: pointer;
+}
+.queueSongAlbum{
+    flex:6;
+}
+.queueDelet{
+    flex:3;
+}
+.queueTitle{
+    font-size: 26px;
+}
+.queueSongAlbum:hover{
+    cursor: pointer;
+}
+.queueDelet i:hover{
+    cursor: pointer;
+}

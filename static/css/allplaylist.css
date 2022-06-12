@@ -1,0 +1,54 @@
+.allplaylist{
+    display: flex;
+    width:100%;
+    flex-wrap: wrap;
+}
+.playlistDiv {
+    padding: 5px;
+    width: 225px;
+    margin-left: 10px;
+
+}
+.playlistimg{
+    width: 200px;
+    height: 200px;
+    padding: 5px;
+    color: #ccc;
+}
+.playlistName{
+    width: 200px;
+    height:50px;
+    font-size: 20px;
+    padding: 5px;
+    align-content: center;
+}
+
+.palylistlink{
+    color: #009579;
+    text-decoration:none;
+}
+.palylistlink:active{
+    color: #009579;
+}
+.palylistlink:hover{
+    color:#FFFFFF;
+    text-decoration:none;
+}
+.addplaylistimg{
+    width: 200px;
+    height: 200px;
+}
+.addplaylistName{
+    width: 200px;
+    height:50px;
+    font-size: 26px;
+    padding: 5px;
+    align-content: center;
+    color: #009579;
+}
+.addplaylistimg:hover{
+    cursor: pointer;
+}
+.addplaylistName:hover{
+    cursor: pointer;
+}

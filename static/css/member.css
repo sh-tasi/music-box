@@ -1,0 +1,110 @@
+.memberTopArea{
+    display: flex;
+    margin-top: 100px;
+    margin-left: 40px;
+    flex-wrap:wrap;
+}
+.memberTopArea img{
+    height: 10em;
+    width: 10em;
+    border-radius: 50%;
+
+}
+.memberNameDiv{
+    font-size: 5em;
+    margin-left: 15px;
+    margin-top: 20px;
+}
+.memberimgBt{
+    color: #009579;;
+    position: relative;
+    bottom: 4rem;
+    font-size: 2.5rem;
+    text-align: center;
+    background-color: black;
+    opacity: 0.8;
+    display: none;
+
+}
+.memberimgBt:hover{
+    cursor: pointer;
+    display: block;
+}
+#memberimg:hover{
+    cursor: pointer;
+}
+.memberimgDiv:hover  .memberimgBt{
+    display: block;
+}
+#memberNamebt{
+    position: relative;
+    font-size: 45px;
+    top:50px;
+    left: 30px;
+
+}
+#memberNamebt:hover{
+    cursor: pointer;
+}
+
+#changePw{
+    font-size: 20px;
+    margin-top: 50px;
+}
+#changePwTitle{
+    font-size: 30px;
+}
+#changePwOld{
+    margin-top: 15px;
+}
+#changePwOld input{
+    margin-left:50px;
+    padding: 5px;
+}
+#changePwNew{
+    margin-top: 15px;
+}
+#changePwNew input{
+    margin-left:50px;
+    padding: 5px;
+}
+#changePwNewCheck{
+    margin-top: 15px;
+}
+#changePwNewCheck input{
+    margin-left:30px;
+    padding: 5px;
+}
+#checkbtDiv{
+    display: flex;
+    margin-top: 20px;
+}
+#pwMessageDiv{
+    width: 220px;
+    color:crimson;
+}
+#pwMessage{
+    padding: 5px;
+    
+}
+#checkPwbt{
+    background-color: #009579;
+    position: relative;
+    padding: 7px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #FFF;
+}
+#checkPwbt:hover{
+    cursor: pointer;
+}
+#checkPwbt:disabled{
+    background-color: dimgray;
+    cursor: no-drop;
+}
+#seePd{
+    font-size: 16px;
+    margin-left: 20px;
+    opacity: 0.8;
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <title>Music Box</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/index.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/media.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/albumlist.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/songlist.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/queueSong.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/allplaylist.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/playlistPage.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/searchPage.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/member.css">
+        <script src="/static/js/songFuntion.js"></script>
+        <script src="/static/js/memberFuntions.js"></script>
+        <script src="/static/js/searchFuntion.js"></script>
+    </head>
+    <body>
+        <div>
+            <nav class="nav">
+                <div class="indexIcon"><i class="fa fa-music" aria-hidden="true"></i>  Music Box</div>
+                <a href="/" id="myLookPage"class="nav__link" data-link>開始探索</a>
+                <a href="/search" class="nav__link" data-link>搜尋歌曲</a>
+                <a href="/collection" class="nav__link" data-link-member>我的音樂庫</a>
+                <br>
+            </nav>
+
+            <div id="app"></div>
+            <script type="module" src="/static/js/index.js"></script>
+        </div>
+        <div class="top__nav">
+            <div class="top_nav_bt" >
+                <i class="fa fa-chevron-left" aria-hidden="true" data-go-pre ></i>
+            </div>
+            <div class="top_nav_user">
+                <div class="top_nav_sign" id="memberArea">               
+                </div>
+                <div class="top_nav_sign" id="signArea">
+                    <a href="/member/signup" class="top_nav_sign_bt">註冊</a>
+                    <a href="/member/signin" class="top_nav_sign_bt">登入</a>
+                </div>
+            </div>
+        </div>
+        <div id="sortDiv">
+            類別：
+            <select id="sort">
+                <option>All</option>
+                <option>Classical</option>
+                <option>Parlour</option>
+                <option>Alternative</option>
+            </select> 
+        </div>    
+        
+        <div class="main">
+             <!---
+            <p id="logo"><i class="fa fa-music"></i>Music</p>  
+             -->
+           <div class="left">      
+                <img id="track_image" data-img-link-album>
+                <div id="leftText">
+                    <div id="title">title.mp3</div>
+                    <div id="artist">Artist name</div>
+                </div>
+           </div>
+           <div class="middle">
+                <button  id="pre"><i class="fa fa-step-backward" aria-hidden="true" data-presong></i></button>
+                <button onclick="justplay()" id="play"><i class="fa fa-play" aria-hidden="true"></i></button>
+                <button  id="next" data-nextsong><i class="fa fa-step-forward" aria-hidden="true" data-nextsong></i></button>
+                 <!---
+                <button id="auto" onclick="autoplay_switch()">Auto play <i class="fa fa-circle-o-notch" aria-hidden="true"></i></button>
+                                               -->
+                <div class="duration">
+                    <div id="nowPlayTime"></div>
+                    <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()">
+                    <div id="totalPlayTime"></div>
+                </div>
+
+            </div>
+            <div class="right">
+                <div><a href="/Queue" class="nav__link" data-link><i class="fa fa-list-ul" aria-hidden="true" data-queue></i></a></div>
+                <div class="volume">
+                    <button onclick="mute_sound()" id="voset"><i class="fa fa-volume-up" aria-hidden="true"  id="volume_icon"></i></button>
+                    <input type="range" min="0" max="100" value="90" onchange="volume_change()" id="volume">  
+                </div> 
+            </div>
+        </div>
+        <div id="refresh"></div>
+        <div id="meanForSong">
+            <div class="meanForSongText" id="addforque">新增至佇列清單</div>
+            <div class="meanForSongText" id="addforplaylsit">新增至播放清單
+                <div class="meanForSongPlaylist" id="meanForSongPlaylist">
+                    <div class="meanForSongPlaylistText" data-addplaylist>test</div>
+                </div>
+            </div>
+        </div>
+        <div id="meanForPlaylist">
+            <div class="meanForSongText"  id="meanForPlaylistPlay">播放清單</div>
+            <div class="meanForSongText"  id="meanForPlaylistDelet">刪除</div>
+        </div>
+        <div id="messageTologin">
+            <div id="messageTitle">TEST</div>
+            <div id="messageText">TEST</div>
+            <div id="messageBt">
+                <a href="/member/signin" class="message_sign_bt">登入</a>
+                <div id="messageTologinClose">現在不要</div>
+            </div>
+        </div>
+        <div id="meanForUserimg">
+            <div id="maenForUserimgSp"></div>
+            <label class="meanUserImgbt"><input id="uploadimg" style="display:none;" type="file"><i class="fa fa-photo"></i> 上傳大頭貼</label><label id="meanUserImgClosebt"><i class="fa fa-times" aria-hidden="true"></i></label>
+            <div ><img  id="meanForUserImgDemo"src="https://d3q6xrhh7sv0kw.cloudfront.net/musicbox/member/guest.png"></div>
+            <div id="meanForUserimgCheck">確認</div>
+        </div>
+        <div id="meanForChangePlaylistName">
+            <div id="meanForChangePlaylistNameTitle">修改播放清單名稱</div>
+            <input type="text" id="meanForChangePlaylistNameValue">
+            <div id="meanForChangePlaylistNameClosebt">取消</div><div id="meanForChangePlaylistNameCheck">確認</div>
+        </div>
+        <div id="meanForPlaylistimg">
+            <div id="meanForPlaylistimgSp"></div>
+            <label class="meanForPlaylistimgbt"><input id="meanForPlaylistimgUploadimg" style="display:none;" type="file"><i class="fa fa-photo"></i> 上傳圖片</label><label id="meanForPlaylistimgClosebt"><i class="fa fa-times" aria-hidden="true"></i></label>
+            <div ><img  id="meanForPlaylistimgDemo"src="https://d3q6xrhh7sv0kw.cloudfront.net/musicbox/playlistImg/channels4_profile.jpg"></div>
+            <div id="meanForPlaylistimgCheck">確認</div>
+        </div>
+        <div id="meanForChangeUserName">
+            <div id="meanForChangeUserNameTitle">更換名稱<label>字數請小於10</label></div>
+            <input id="meanForChangeUserNameInput"type="text" maxlength="10">
+            <button id="meanForChangeUserNameClosebt">取消</button><button id="meanForChangeUserNameCheck">確認</button>
+        </div>
+        <div id="bg" class="bg">&thinsp;</div>
+        <div id="tellmessage">上傳中，請稍等....</div>
+    </body>
+    <script src="/static/js/mediaFuntions.js"></script>
+    <script>
+    ////客戶參數 reset
+    let thisAlbum=[];
+    let All_song=[];
+    let User=null;
+    let userData={};
+    let nextkeyForAddPlaylist=false;
+    let addSong=null;
+    history.pushState("first", "Music Box", location.href);
+    localStorage.setItem("searchKey", null);
+    ////
+    </script>
+
+    
+
+
+
+</html>
