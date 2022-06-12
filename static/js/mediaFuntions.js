@@ -67,9 +67,9 @@ function reset_slider(){
 
 // play song
 function playsong(){
-track.play();
-Playing_song = true;
-play.innerHTML = '<i class="fa fa-pause" aria-hidden="true"></i>';
+    track.play();
+    Playing_song = true;
+    play.innerHTML = '<i class="fa fa-pause" aria-hidden="true"></i>';
 }
 
 //pause song
