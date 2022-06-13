@@ -49,17 +49,21 @@ def deletPlaylist(userId,playlistKey):
         rep="error"
     return(rep)
 def addSongInPlaylist(userId,playlistKey,songlist):
-    userPlaylist.update_item(
-    Key={
-        'UserID': userId,
-        'playlistKey': playlistKey,
-    },
-    UpdateExpression='SET songlist = :val1',
-    ExpressionAttributeValues={
-        ':val1': songlist
-    }
-)
-    return("ok")
+    try:
+        userPlaylist.update_item(
+            Key={
+                'UserID': userId,
+                'playlistKey': playlistKey,
+            },
+            UpdateExpression='SET songlist = :val1',
+            ExpressionAttributeValues={
+                ':val1': songlist
+            }
+        )
+        items="ok"
+    except:
+        items="error"
+    return(items)
 def getUserplaylist(UserID):
     try:
         response = userPlaylist.query(
