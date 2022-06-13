@@ -138,12 +138,12 @@ def sql_get_user_data(userID):
     cnx.close() 
     return(myresult)
 def get_user(token):
-        token_decode=jwt.decode(token, "secret", algorithms=["HS256"])   
-        username=token_decode["username"]
-        userData=sql_get_user_data(username)
-        data={"id":username,"name":userData[0],"email":userData[1],"userImg":userData[2]}
-        response={"data":data}  
-        return jsonify(response)
+    token_decode=jwt.decode(token, "secret", algorithms=["HS256"])   
+    username=token_decode["username"]
+    userData=sql_get_user_data(username)
+    data={"id":username,"name":userData[0],"email":userData[1],"userImg":userData[2]}
+    response={"data":data}  
+    return jsonify(response)
 def decode_token_user(token):
     token_decode=jwt.decode(token, "secret", algorithms=["HS256"])   
     userID=token_decode["username"]

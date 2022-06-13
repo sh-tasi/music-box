@@ -41,13 +41,14 @@ def addSongInPlayListROUTER():
         response={"error":True,"message":"尚未登入系統"}
     else:
         userId=decode_token_user(token)
-        print(userId)
         data=request.get_json()
         playlistKey=data['playlistKey']
         songlist=data['songlist']
-        addSongInPlaylist(userId,playlistKey,songlist)
-        response={"ok":True,"playlistKey":playlistKey}
-        print(response)
+        message=addSongInPlaylist(userId,playlistKey,songlist)
+        if message!="ok":
+            response={"error":True,"message":"連線失敗"}
+        else:
+            response={"ok":True,"playlistKey":playlistKey}
     repsone_js=jsonify(response)
     return(repsone_js)
 @playlist_sys.route('/playlist',methods=["GET"])
