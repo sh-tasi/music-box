@@ -7,7 +7,7 @@
 #### 1. javascript
 #### 2. HTML
 #### 3. CSS
-#### 4. SPA (USE History API)
+#### 4. SPA (Use History API)
 #### 5. Canvas API 
 
 ## 後端技術
@@ -15,13 +15,15 @@
 #### 2. Docker
 #### 3. DynamoDB
 #### 4. RDS
+#### 5. Redis
+
 
 ## 流程圖
 [![](https://github.com/sh-tasi/test001/blob/main/musicpic/%E6%B5%81%E7%A8%8B%E5%9C%96.png?raw=true)](https://github.com/sh-tasi/test001/blob/main/musicpic/%E6%B5%81%E7%A8%8B%E5%9C%96.png?raw=true "flow")
 ----------------------------------------------------------------
 
 ## AWS雲端架構圖
-[![](https://github.com/sh-tasi/test001/blob/main/musicpic/%E9%9B%B2%E7%AB%AF%E6%9E%B6%E6%A7%8B%E5%9C%96.png?raw=true)](https://github.com/sh-tasi/test001/blob/main/musicpic/%E9%9B%B2%E7%AB%AF%E6%9E%B6%E6%A7%8B%E5%9C%96.png?raw=true "AWS")
+[![](https://github.com/sh-tasi/test001/blob/main/musicpic/%E9%9B%B2%E7%AB%AF%E6%9E%B6%E6%A7%8B%E5%9C%96617.png?raw=true)](https://github.com/sh-tasi/test001/blob/main/musicpic/%E9%9B%B2%E7%AB%AF%E6%9E%B6%E6%A7%8B%E5%9C%96617.png?raw=true "AWS")
 -----------------------------------------------------------------
 
 ## SQL 資料表關聯圖

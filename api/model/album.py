@@ -1,5 +1,12 @@
 import mysql.connector
 from flask import jsonify
+import json
+import redis 
+import configparser
+config = configparser.ConfigParser()
+config.read('config.ini')
+redis_pool=redis.ConnectionPool(host=config['datakey']['redisPoint'], port=6379, decode_responses=True)
+r = redis.Redis(connection_pool=redis_pool)
 def sql_get_all_albums():
     cnx = mysql.connector.connect(pool_name = "mypool")
     mycursor = cnx.cursor()
@@ -16,7 +23,7 @@ def sql_get_all_albums():
             "albumImg":album[4]
             }
             albumlist.append(albumData)
-    response=jsonify({"data":albumlist})
+    response={"data":albumlist}
     mycursor.close()
     cnx.close()
     return(response)
@@ -53,7 +60,6 @@ def sql_get_album(albumkey):
     mycursor.close()
     cnx.close()
 
-    response_body=jsonify(response_body)
     return(response_body)
 def sql_search_song(keyword):
     cnx = mysql.connector.connect(pool_name = "mypool")
@@ -106,7 +112,38 @@ def sql_sort_album(sort):
             "albumImg":album[4]
             }
             albumlist.append(albumData)
-    response=jsonify({"data":albumlist})
+    response={"data":albumlist}
     mycursor.close()
     cnx.close()
     return(response)
+
+def redis_set_all_album(response): 
+    response_js=json.dumps(response)
+    r.set('all_album', response_js,ex=3600*6)
+def redis_get_all_album():
+    response=r.get('all_album')
+    if response==None:
+        return(response)
+    else:
+        reponse_dict=json.loads(response)
+        return(reponse_dict)
+def redis_set_sort_album(sort,response):
+    response_js=json.dumps(response)
+    r.set(sort, response_js,ex=3600*6)
+def redis_get_sort_album(sort):
+    response=r.get(sort)
+    if response==None:
+        return(response)
+    else:
+        reponse_dict=json.loads(response)
+        return(reponse_dict)
+def redis_set_album_albumkey(albumKey,response):
+    response_js=json.dumps(response)
+    r.set(albumKey, response_js,ex=600)
+def redis_get_album_albumkey(albumKey):
+    response=r.get(albumKey)
+    if response==None:
+        return(response)
+    else:
+        reponse_dict=json.loads(response)
+        return(reponse_dict)
