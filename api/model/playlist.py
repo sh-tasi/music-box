@@ -2,6 +2,7 @@ import boto3
 from boto3.dynamodb.conditions import Key, Attr
 import time
 import configparser
+import os
 config = configparser.ConfigParser()
 config.read('config.ini')
 s3 = boto3.client(
@@ -112,10 +113,11 @@ def changePlaylistIMG(userId,playlistKey,file):
             
             s3Filename= number+userId+".jpg"
             
-            file.save(myFilename)
+            file.save(os.path.join("tempfile/"+myFilename))
+            
             s3.upload_file(
                 Bucket="shenghao",
-                Filename=myFilename,
+                Filename="tempfile/"+myFilename,
                 Key= "musicbox/playlistImg/"+s3Filename,
                 
             )

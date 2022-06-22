@@ -55,7 +55,7 @@ function addsearchElemnt(rep){
         let thisAlbum=rep[i].album;
         let thisAlbumKey=rep[i].albumkey;
         let imgkey=rep[i].imgkey
-        let artis=rep[i].albumkey;
+        let artis=rep[i].artis;
         let datakey=rep[i].datakey;
         let name=rep[i].name;
         let time=rep[i].songtime;
