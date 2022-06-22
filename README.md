@@ -1,7 +1,21 @@
 # Music Box
 #### 這是一個提供使用者聆聽音樂的 Web app，可以在這裡輕鬆享受音樂
-#### 試用連結: <https://mucsicboxtw.xyz/>
+#### 上線連結: <https://mucsicboxtw.xyz/>
 #### 測試帳號: <test@test>  密碼:test
+
+## 後端技術
+#### 1. Flask
+#### 2. MySQL
+#### 3. Redis
+#### 4. Docker
+#### 5. Nginx
+
+## AWS雲端服務
+#### 1. RDS
+#### 2. ElastiCache
+#### 3. DynamoDB
+#### 4. S3
+#### 5. CloudFront
 
 ## 前端技術
 #### 1. javascript
@@ -9,14 +23,6 @@
 #### 3. CSS
 #### 4. SPA (Use History API)
 #### 5. Canvas API 
-
-## 後端技術
-#### 1. Flask
-#### 2. Docker
-#### 3. DynamoDB
-#### 4. RDS
-#### 5. Redis
-
 
 ## 流程圖
 [![](https://github.com/sh-tasi/test001/blob/main/musicpic/%E6%B5%81%E7%A8%8B%E5%9C%96.png?raw=true)](https://github.com/sh-tasi/test001/blob/main/musicpic/%E6%B5%81%E7%A8%8B%E5%9C%96.png?raw=true "flow")

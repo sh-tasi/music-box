@@ -4,6 +4,7 @@ import time
 import jwt
 import boto3
 import configparser
+import os
 config = configparser.ConfigParser()
 config.read('config.ini')
 s3 = boto3.client(
@@ -164,15 +165,15 @@ def upload_img(file,id):
     number = time.strftime("%Y%m%d%H%M%S", struct_time)
     if file:
         
-        myFilename= "test.jpg"
+        myFilename= "member.jpg"
         
         s3Filename= number+id+".jpg"
         
-        file.save(myFilename)
+        file.save(os.path.join("tempfile/"+myFilename))
         
         s3.upload_file(
             Bucket="shenghao",
-            Filename=myFilename,
+            Filename="tempfile/"+myFilename,
             Key= "musicbox/member/"+s3Filename,
             
         )
